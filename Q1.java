@@ -9,9 +9,7 @@ class medicalinvetory{
         this.strength=str;
         this.quantity=quan;
     }
-    void update(medicalinvetory addquantity ,int add){
-        addquantity.quantity+=add;
-    }
+
     void displaydetails(){
         System.out.println(medicinename +" "+strength +" "+quantity);
 
@@ -42,10 +40,13 @@ class  Q1{
         System.out.print("enter the quantity to add : ");
         add=write.nextInt();
 
-        M1.update(M1,add);
+        update(M1,add);
         System.out.println("After adding "+add +" :");
         M1.displaydetails();
 
 
+    }
+   public static  void update(medicalinvetory addquantity ,int add){
+        addquantity.quantity+=add;
     }
 }
